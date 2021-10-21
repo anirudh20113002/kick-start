@@ -1,0 +1,23 @@
+print("KICK_START_PROBLEM:\n")
+testcase=int(input("ENTER THE NUMBER "))                           
+inputs=[]                                                                                         
+print("ENTER THE CASES ONE BY ONE","\n")                                                   
+for i in range(0,testcase):                                                                
+      inputs.append(input())                                                              
+for i in range(0,testcase):                                                                
+      word=inputs[i]                                                                         
+      kick_lists=[]                                                                              
+      start_lists=[]   
+      count=0 
+word=word.upper()                              
+for j in range(0,len(word)):                   
+      if word[j:j+4]=="KICK":               
+          kick_lists.append(j)                      
+                                                                                                                                                                       
+      if word[j:j+5]=="START":             
+          start_lists.append(j)                     
+                                                                                                                                 
+for l in kick_lists:                             
+      for k in start_lists:                           
+            if l < k:                                                                                                                         
+                count=count+1
